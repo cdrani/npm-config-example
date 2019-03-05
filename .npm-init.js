@@ -11,9 +11,9 @@ module.exports = {
   main: prompt('main file', 'index.js', main => `${main}.js`),
   description: prompt('description', 'awesome project', desc => `${desc}`),
   scripts: {
-    clean: 'rimraf dist',
-    build: 'npm run clean && webpack',
-    serve: 'webpack-dev-server'
+    'clean': 'rimraf dist',
+    'build': 'npm run clean && webpack',
+    'serve': 'webpack-dev-server'
   },
   keywords: prompt('keywords', 'node, webpack, react', list => list.split(' ')),
   dependencies: {
@@ -30,7 +30,7 @@ module.exports = {
     type: prompt('source control', 'git', type => `${type}`),
     url: prompt('repo url', `${pwd()}`, repo => `${url}${repo}.git`)
   },
-  author: prompt('author', `cdrani`, author => `${author}`),
+  author: prompt('author', 'cdrani', author => `${author}`),
   license: prompt('MIT | ISC | BSD', 'MIT', license => `${license}`),
   bugs: prompt('bugs', `${pwd()}`, repo => `${url}${repo}/issues`),
   homepage: prompt('homepage url', `${url}${pwd()}`, link => `${link}`)
